@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="form">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-control">
+        <h1 class="heading">Log In</h1>
+        <div class="form-control__input">
+          <span class="input-name">Name</span>
+          <mat-form-field appearance="fill" class="input">
+            <input matInput formControlName="name">
+          </mat-form-field>
+          <div *ngIf="loginForm.get('name')?.errors?.required && loginForm.get('name')?.touched">
+            <small style="color: #ff0000;">The login field cannot be empty</small>
+          </div>
+
+          <span class="input-name">Password</span>
+          <mat-form-field appearance="fill" class="input">
+            <input matInput type="password" formControlName="password">
+          </mat-form-field>
+          <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+            <small style="color: #ff0000;">Password must be at least 6 characters long</small>
+          </div>
+          <a href="" class="form-link">Forgot Password</a>
+        </div>
+        <div class="form-control__buttons">
+          <button mat-flat-button color="primary" type="submit" class="button">Login</button>
+        </div>
+        <div class="linkTo-register">Don't have an account? <a routerLink="/signup">Create Account</a></div>
+      </div>
+    </form>
+  </div>
+</div>
