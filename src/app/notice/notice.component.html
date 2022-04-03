@@ -1,0 +1,28 @@
+<div class="contaier-notice">
+  <div class="notice" [ngClass]="{ 'notice_failure': error == true, 'notice_success': error == false }">
+    <div class="notice__content">
+      <div class="notice__svg">
+        <div *ngIf="error == false">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 17.837 17.837" style="enable-background:new 0 0 17.837 17.837;" xml:space="preserve">
+            <path xmlns="http://www.w3.org/2000/svg" style="fill:#fff;" d="M16.145,2.571c-0.272-0.273-0.718-0.273-0.99,0L6.92,10.804l-4.241-4.27   c-0.272-0.274-0.715-0.274-0.989,0L0.204,8.019c-0.272,0.271-0.272,0.717,0,0.99l6.217,6.258c0.272,0.271,0.715,0.271,0.99,0   L17.63,5.047c0.276-0.273,0.276-0.72,0-0.994L16.145,2.571z"/>
+          </svg>
+        </div>
+
+        <div *ngIf="error == true">
+          <svg viewBox="0 0 24 24" preserveAspectRatio="none" class="i8-icon-path">
+            <path d="M6.41408 5.00002C6.0236 4.60953 5.3905 4.60953 5.00002 5.00002C4.60953 5.3905 4.60953 6.0236 5.00002 6.41408L10.586 12L5.00002 17.586C4.60953 17.9764 4.60953 18.6095 5.00002 19C5.3905 19.3905 6.0236 19.3905 6.41408 19L12 13.4141L17.586 19C17.9764 19.3905 18.6095 19.3905 19 19C19.3905 18.6095 19.3905 17.9764 19 17.586L13.4141 12L19 6.41408C19.3905 6.0236 19.3905 5.3905 19 5.00002C18.6095 4.60953 17.9764 4.60953 17.586 5.00002L12 10.586L6.41408 5.00002Z" style="height: 100%; fill: #fff"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="notice__message">
+        <p *ngIf="error == false">Accessed</p>
+        <p *ngIf="error == true">Wrong email or password</p>
+      </div>
+    </div>
+    <button type="button" class="notice__btn btn-close" (click)="closeNotice()">
+      <svg viewBox="0 0 24 24" preserveAspectRatio="none" class="i8-icon-path">
+        <path d="M6.41408 5.00002C6.0236 4.60953 5.3905 4.60953 5.00002 5.00002C4.60953 5.3905 4.60953 6.0236 5.00002 6.41408L10.586 12L5.00002 17.586C4.60953 17.9764 4.60953 18.6095 5.00002 19C5.3905 19.3905 6.0236 19.3905 6.41408 19L12 13.4141L17.586 19C17.9764 19.3905 18.6095 19.3905 19 19C19.3905 18.6095 19.3905 17.9764 19 17.586L13.4141 12L19 6.41408C19.3905 6.0236 19.3905 5.3905 19 5.00002C18.6095 4.60953 17.9764 4.60953 17.586 5.00002L12 10.586L6.41408 5.00002Z" style="height: 100%;"></path>
+      </svg>
+    </button>
+  </div>
+</div>

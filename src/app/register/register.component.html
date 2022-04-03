@@ -37,3 +37,7 @@
     </form>
   </div>
 </div>
+
+<div *ngIf="notice">
+  <app-notice [error]="error" (noticeStatus)="notice = $event"></app-notice>
+</div>

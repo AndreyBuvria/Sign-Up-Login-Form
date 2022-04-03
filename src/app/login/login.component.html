@@ -4,12 +4,16 @@
       <div class="form-control">
         <h1 class="heading">Log In</h1>
         <div class="form-control__input">
-          <span class="input-name">Name</span>
+          <span class="input-name">Email</span>
           <mat-form-field appearance="fill" class="input">
-            <input matInput formControlName="name">
+            <input matInput formControlName="email">
           </mat-form-field>
-          <div *ngIf="loginForm.get('name')?.errors?.required && loginForm.get('name')?.touched">
-            <small style="color: #ff0000;">The login field cannot be empty</small>
+          <div *ngIf="loginForm.get('email')?.errors?.required && loginForm.get('email')?.touched">
+            <small style="color: #ff0000;">The email field cannot be empty</small>
+          </div>
+
+          <div *ngIf="loginForm.get('email')?.errors?.email">
+            <small style="color: #ff0000;">Wrong email address</small>
           </div>
 
           <span class="input-name">Password</span>
@@ -28,4 +32,8 @@
       </div>
     </form>
   </div>
+</div>
+
+<div *ngIf="notice">
+  <app-notice [error]="error" (noticeStatus)="notice = $event"></app-notice>
 </div>

@@ -1,0 +1,69 @@
+/* ------- NOTICE ------- */
+
+.contaier-notice {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+
+  transition: all 0.5s ease;
+}
+
+.notice {
+  display: flex;
+  align-items: center;
+
+  width: 323px;
+  height: 160px;
+
+  padding: 32px 42px;
+
+  color: #fff;
+  border-radius: 8px;
+
+  .notice__content {
+    display: flex;
+    align-items: center;
+  }
+
+  .notice__svg {
+    width: 62px;
+    height: 62px;
+
+  }
+  .notice__btn {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+  }
+
+  .notice__message {
+    margin-top: 8px;
+    margin-left: 26px;
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+.notice_success {
+  background: #07c56e;
+}
+.notice_failure {
+  background: #f54635;
+}
+
+.btn-close {
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  fill: #fff;
+
+  transition: all 0.5s ease;
+
+  &:hover {
+    opacity: 90%;
+  }
+}
